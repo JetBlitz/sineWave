@@ -6,6 +6,7 @@ console.log(ctx)
 let start = 0;
 let xCoordinate = 1000;
 let yCoordinate = (Math.trunc(Math.sin(xCoordinate) * 100)) + 500;
+let offSet = 50;
 // ctx.lineTo(1) //accepts x,y coordinates
 // ctx.moveTo // starting point
 // ctx.stroke()
@@ -13,18 +14,23 @@ ctx.beginPath();
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
 ctx.fillStyle = 'white'
-ctx.moveTo(1000, yCoordinate);
+ctx.moveTo(0, yCoordinate);
 ctx.lineWidth = '10';
 
 
 
-const timer = setInterval(tick, 100, 20);
+const timer = setInterval(tick, 50);
 
-function tick(end) {
+function tick() {
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
     ctx.beginPath();
-    ctx.lineTo(xCoordinate, yCoordinate)
-    ctx.lineTo(xCoordinate + 50, yCoordinate)
+    for (var i = 0; i < 100;  i++) {
+      ctx.lineTo(0 + offSet*i, (Math.trunc(Math.sin(xCoordinate + offSet*i) * 50)) + 500)
+    }
+    // ctx.lineTo(500, (Math.trunc(Math.sin(xCoordinate) * 100)) + 500)
+    // ctx.lineTo(550, (Math.trunc(Math.sin(xCoordinate + 50) * 100)) + 500)
+    // ctx.lineTo(600, (Math.trunc(Math.sin(xCoordinate +100) * 100)) + 500)
+    // ctx.lineTo(650, (Math.trunc(Math.sin(xCoordinate +150) * 100)) + 500)
     ctx.stroke();
     start++
     xCoordinate -= 50;
