@@ -22,9 +22,7 @@ Then, open the index.html file to see the sine wave.
 
 5) Go to your terminal and make sure you're in the directory you want to clone the remote repo into. If not, navigate to the correct directory.
 
-6) Once you're in the correct directory, type in and paste the URL:
-
-  git clone https://github.com/JetBlitz/sineWave.git
+6) Once you're in the correct directory, type in and paste the URL: git clone https://github.com/JetBlitz/sineWave.git
 
 7) If you are in the folder where the repo has been cloned down, double-click index.html to open up your browser to see the sine wave in action!
 
