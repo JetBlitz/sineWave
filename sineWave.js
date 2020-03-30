@@ -7,9 +7,9 @@ let start = 0;
 let xCoordinate = 1000;
 let yCoordinate = (Math.trunc(Math.sin(xCoordinate) * 100)) + 500;
 let offSet = 50;
-// ctx.lineTo(1) //accepts x,y coordinates
+// ctx.lineTo(1) // accepts x,y coordinates
 // ctx.moveTo // starting point
-// ctx.stroke()
+// ctx.stroke() // publishes the line
 ctx.beginPath();
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
