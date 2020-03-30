@@ -1,5 +1,3 @@
-//sineWave
-
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 console.log(ctx)
@@ -7,9 +5,7 @@ let start = 0;
 let xCoordinate = 1000;
 let yCoordinate = (Math.trunc(Math.sin(xCoordinate) * 100)) + 500;
 let offSet = 50;
-// ctx.lineTo(1) // accepts x,y coordinates
-// ctx.moveTo // starting point
-// ctx.stroke() // publishes the line
+
 ctx.beginPath();
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
@@ -27,16 +23,11 @@ function tick() {
     for (var i = 0; i < 100;  i++) {
       ctx.lineTo(0 + offSet*i, (Math.trunc(Math.sin(xCoordinate + offSet*i) * 50)) + 500)
     }
-    // ctx.lineTo(500, (Math.trunc(Math.sin(xCoordinate) * 100)) + 500)
-    // ctx.lineTo(550, (Math.trunc(Math.sin(xCoordinate + 50) * 100)) + 500)
-    // ctx.lineTo(600, (Math.trunc(Math.sin(xCoordinate +100) * 100)) + 500)
-    // ctx.lineTo(650, (Math.trunc(Math.sin(xCoordinate +150) * 100)) + 500)
+
     ctx.stroke();
     start++
     xCoordinate -= 50;
     yCoordinate = (Math.trunc(Math.sin(xCoordinate) * 100)) + 500;
     console.log(xCoordinate, yCoordinate)
-   // console.log(start);
-  // console.log(end);
-}
 
+}
